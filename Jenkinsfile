@@ -14,6 +14,7 @@ pipeline {
         sh "apk add mongodb=3.4.4-r0"
         sh "chmod +x ./scripts/dropdb.sh"
         sh "npm install"
+        sh "npm audit fix"
       }
     }
     stage("Test") {
